@@ -48,14 +48,7 @@ public class Spawner : MonoBehaviour
         for (int i = 0; i < cubsCount; i++)
         {
             var cube = Instantiate(_cube, transform.position, transform.rotation);
-            cube.Initialize(transform.localScale, _separateChanse);
-            List<Rigidbody> cubes = new();
-            cubes.Add(cube.GetComponent<Rigidbody>());
-
-            foreach (Rigidbody exploadableObject in cubes)
-            {
-                exploadableObject.AddExplosionForce(_exploder.ExplosionForce, transform.position, _exploder.ExplosionRadius);
-            }
+            cube.Initialize(transform.localScale, _separateChanse,_exploder.ExplosionRadius, _exploder.ExplosionForce);
         }
     }
 }

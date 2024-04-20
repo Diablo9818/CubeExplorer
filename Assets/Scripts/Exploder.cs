@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class Exploder : MonoBehaviour
 {
+    [SerializeField] private int _increaseCount;
     [SerializeField] private float _explosionRadius;
     [SerializeField] private float _explosionForce;
     [SerializeField] private ParticleSystem _effect;
 
     public float ExplosionRadius => _explosionRadius;
+
     public float ExplosionForce => _explosionForce;
+
+    public void Initialize(float explosionRadius, float explosionForce)
+    {
+        _explosionRadius = explosionRadius * _increaseCount;
+        _explosionForce = explosionForce * _increaseCount;
+    }
 
     public void Explode()
     {
@@ -37,5 +45,4 @@ public class Exploder : MonoBehaviour
 
         return cubes;
     }
-
 }

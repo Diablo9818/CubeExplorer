@@ -836,14 +836,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7660722607589583107, guid: dd22857477e65ac41a79a82b5f1da8fc, type: 3}
-      propertyPath: _explosionForce
-      value: 243.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 7660722607589583107, guid: dd22857477e65ac41a79a82b5f1da8fc, type: 3}
-      propertyPath: _explosionRadius
-      value: 43.52
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
